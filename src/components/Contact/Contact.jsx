@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import { useRef } from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -15,10 +17,12 @@ const Contact = () => {
       "VZ816vykUK5zC0Jy1"
     );
     e.target.reset();
+    toast("Send message successfully");
   };
 
   return (
     <section className="contact section" id="contact">
+      <ToastContainer />
       <h2 className="section-title">Contact Me</h2>
       <span className="section-subtitle">Say Hello</span>
 
@@ -36,6 +40,7 @@ const Contact = () => {
                 href="https://mail.google.com"
                 className="contact-button"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -51,6 +56,7 @@ const Contact = () => {
                 href="https://instagram.com/kishormahmud9?igshid=MzNlNGNkZWQ4Mg=="
                 className="contact-button"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -66,6 +72,7 @@ const Contact = () => {
                 href="https://www.facebook.com/kishor.mahmud.009"
                 className="contact-button"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
@@ -107,8 +114,6 @@ const Contact = () => {
               </label>
               <textarea
                 name="message"
-                cols="30"
-                row="10"
                 className="contact-form-input"
                 placeholder="Write your Message"
               ></textarea>
