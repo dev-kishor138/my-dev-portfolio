@@ -104,7 +104,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 className="contact-form-input"
-                placeholder="Type Your Name Here"
+                placeholder="Type Your Email Here"
               />
             </div>
 
