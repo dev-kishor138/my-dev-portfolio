@@ -12,7 +12,7 @@
 }
 
 .skills-title {
-    font-size: var(--normal-font-text);
+    font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     text-align: center;
     margin-bottom: var(--m-1-5);
@@ -42,9 +42,10 @@
 }
 
 .skills-name {
-    font-size: var(--normal-font-text);
+    font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     line-height: 18px;
+    color: var(--title-color-dark);
 }
 
 .skills-level {

@@ -14,7 +14,7 @@
 .services-icon {
     display: block;
     font-size: 2rem;
-    color: var(--title-color);
+    color: var(--title-color-dark);
     margin-bottom: var(--m-1);
 }
 
@@ -22,6 +22,7 @@
     font-size: var(--h3-font-size);
     margin-bottom: var(--m-1);
     font-weight: var(--font-medium);
+    color: var(--title-color-dark);
 }
 
 .services-button {

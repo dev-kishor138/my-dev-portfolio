@@ -42,5 +42,6 @@
     display: block;
     margin-top: 2rem;
     text-align: center;
-    font-size: smaller-font-size;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
 }

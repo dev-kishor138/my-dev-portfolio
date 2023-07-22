@@ -1,3 +1,4 @@
+
 import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
@@ -11,10 +12,14 @@ import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 import Testimonial from "./components/Testimonial/Testimonial";
 
+
+
 function App() {
   return (
     <>
+
       <Header></Header>
+
 
       <main className="main">
         <Home></Home>
@@ -23,7 +28,7 @@ function App() {
         <Services></Services>
         <Qualification></Qualification>
         <Projects></Projects>
-        {/* <Testimonial></Testimonial> */}
+        <Testimonial></Testimonial>
         <Contact></Contact>
       </main>
 

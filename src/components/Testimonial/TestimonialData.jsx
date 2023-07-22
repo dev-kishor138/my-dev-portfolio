@@ -1,7 +1,7 @@
 import image1 from "../../assets/testimonial/test1.jpg";
 import image2 from "../../assets/testimonial/test2.jpeg";
 import image3 from "../../assets/testimonial/test3.webp";
-import image4 from "../../assets/testimonial/test4.webp";
+import image4 from "../../assets/testimonial/cap2.jpg";
 
 export const TestimonialData = [
   {

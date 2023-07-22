@@ -16,6 +16,7 @@
     height: 60px;
     border-radius: 50%;
     margin-bottom: var(--m-1);
+    object-fit: cover;
 }
 
 .testimonial-name {
@@ -31,7 +32,7 @@
 
 /* Swiper Class  */
 .swiper-pagination-bullet {
-    background-color: var(--text-color) !important;
+    background-color: var(--title-color-dark) !important;
 }
 
 .swiper-pagination-bullet-active {

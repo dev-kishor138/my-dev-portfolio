@@ -52,10 +52,11 @@
     font-weight: var(--font-medium);
     margin-bottom: var(--m-0-5);
     margin-top: 10px;
+    color: var(--title-color-dark);
 }
 
 .project-button {
-    color: var(--text-color);
+    color: var(--title-color);
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;

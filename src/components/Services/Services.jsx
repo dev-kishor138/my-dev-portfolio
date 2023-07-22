@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Services.css";
 
 const Services = () => {
@@ -16,7 +16,7 @@ const Services = () => {
         <div className="services-content">
           <div>
             <i className="uil uil-edit services-icon"></i>
-            <h3 className="services title">
+            <h3 className="services-title">
               Web <br /> Designer
             </h3>
           </div>
@@ -87,7 +87,7 @@ const Services = () => {
         <div className="services-content">
           <div>
             <i className="uil uil-web-grid services-icon"></i>
-            <h3 className="services title">
+            <h3 className="services-title">
               Frontend <br /> Developer
             </h3>
           </div>
@@ -157,7 +157,7 @@ const Services = () => {
         <div className="services-content">
           <div>
             <i className="uil uil-arrow services-icon"></i>
-            <h3 className="services title">
+            <h3 className="services-title">
               Backend <br /> Developer
             </h3>
           </div>

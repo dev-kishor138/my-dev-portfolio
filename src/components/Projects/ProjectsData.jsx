@@ -13,6 +13,7 @@ import Image12 from "../../assets/Projects/project1.png";
 import Image13 from "../../assets/Projects/project6.png";
 import Image14 from "../../assets/Projects/project14.png";
 import Image15 from "../../assets/Projects/project15.png";
+import Image16 from "../../assets/Projects/image16.png"
 
 export const projectsData = [
   {
@@ -119,6 +120,13 @@ export const projectsData = [
     title: "Family Tree",
     category: "design",
     link: "https://github.com/dev-kishor138/Family-tree",
+  },
+  {
+    id: 16,
+    image: Image16,
+    title: "Simple Portfolio",
+    category: "react",
+    link: "https://portfolio-3-0-plum.vercel.app/",
   },
 ];
 

@@ -11,7 +11,7 @@
 
 .home-social {
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 1rem;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .home-social-icon:hover {
-    color: var(--title-color-dark);
+    color: var(--text-color);
 }
 
 .home-title {
@@ -48,7 +48,7 @@
     position: absolute;
     width: 70px;
     height: 1px;
-    background-color: var(--text-color);
+    background-color: var(--title-color);
     left: 0;
     top: 1rem;
 }
@@ -59,7 +59,7 @@
 }
 
 .home-img {
-    background: url(../../assets/img.jpg);
+    background: url("../../assets/myimage.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

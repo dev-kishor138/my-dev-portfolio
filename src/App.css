@@ -7,10 +7,12 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --title-color: #333333;
+  /* --title-color: #333333; */
+  --title-color: #0c897a;
   --title-color-dark: #000;
-  --text-color: #757575;
-  --body-color: #FAFAFA;
+  /* --text-color: #757575; */
+  --text-color: #f7df1d;
+  --body-color: #FAF3F0;
   --container-color: #fff;
 
   /*========== Fonts ==========*/
@@ -149,9 +151,10 @@ img {
   display: inline-block;
   background-color: var(--title-color);
   color: var(--container-color);
-  padding: 1.25rem 2rem;
+  padding: 0.9rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: 0.4s;
 }
 
 .button:hover {

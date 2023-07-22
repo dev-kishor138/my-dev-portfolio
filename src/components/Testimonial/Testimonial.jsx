@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,6 +20,7 @@ const Testimonial = () => {
       <Swiper
         className="testimonial-container"
         loop={true}
+        autoplay={true}
         grabCursor={true}
         spaceBetween={24}
         pagination={{

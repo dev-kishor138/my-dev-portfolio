@@ -1,7 +1,6 @@
 
 import "./About.css";
-import AboutImg from "../../assets/img1.jpeg";
-import Resume from "../../assets/resume.pdf";
+import AboutImage from '../../assets/aboutimage.jpeg'
 import Info from "./Info";
 import AboutMe from "./AboutMe";
 
@@ -12,12 +11,12 @@ const About = () => {
       <span className="section-subtitle">My Introduction</span>
 
       <div className="about-container container grid">
-        <img src={AboutImg} alt="" className="about-img" />
+        <img src={AboutImage} alt="" className="about-img" />
         <div className="about-data">
           <AboutMe />
           <Info></Info>
           <p className="about-description"></p>
-          <a download="" href={Resume} className="button button-flex">
+          <a href='https://my-resume-nine-wheat.vercel.app/' className="button button-flex">
             Download Resume
             <svg
               className="button-icon"

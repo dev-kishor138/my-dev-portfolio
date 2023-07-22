@@ -1,7 +1,7 @@
-import React from "react";
+
 
 const Project = ({ data }) => {
-  const { image, title, category, link } = data;
+  const { image, title, link } = data;
   return (
     <div className="project-card">
       <div className="project-img">
@@ -9,7 +9,7 @@ const Project = ({ data }) => {
       </div>
 
       <h3 className="project-title">{title}</h3>
-      <a href={link} target="_blank" className="project-button">
+      <a href={link} target="_blank" rel="noreferrer noopener" className="project-button">
         Demo <i className="bx bx-right-arrow-alt project-button-icon"></i>
       </a>
     </div>
