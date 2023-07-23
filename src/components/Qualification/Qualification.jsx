@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Qualification.css";
 
 const Qualification = () => {
@@ -36,7 +36,7 @@ const Qualification = () => {
             onClick={() => activeToggle(2)}
           >
             <i className="uil uil-briefcase-alt qualification-icon"></i>{" "}
-            Experience
+            Course
           </div>
         </div>
 
@@ -133,22 +133,22 @@ const Qualification = () => {
                 <span className="qualification-line"></span>
               </div>
               <div>
-                <h3 className="qualification-title">Jr. Web Developer</h3>
+                <h3 className="qualification-title">Web Development with MERN</h3>
                 <span className="qualification-subtitle">
                   E-Learning and Earning LTD
                 </span>
                 <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2022 - 2023
+                  <i className="uil uil-calendar-alt"></i> Oct 2022 - Dec 2022
                 </div>
               </div>
             </div>
 
             <div className="qualification-data">
               <div>
-                <h3 className="qualification-title">Web Developer</h3>
-                <span className="qualification-subtitle">Upcoming...</span>
+                <h3 className="qualification-title">Programming With Javascript</h3>
+                <span className="qualification-subtitle">Free Code Camp</span>
                 <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2023 - Upcoming...
+                  <i className="uil uil-calendar-alt"></i> Oct 2021 - 12 2021
                 </div>
               </div>
 

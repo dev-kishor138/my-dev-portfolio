@@ -16,7 +16,7 @@ const About = () => {
           <AboutMe />
           <Info></Info>
           <p className="about-description"></p>
-          <a href='https://my-resume-nine-wheat.vercel.app/' className="button button-flex">
+          <a href='https://my-resume-nine-wheat.vercel.app/' target="_blank" rel="noreferrer noopener" className="button button-flex">
             Download Resume
             <svg
               className="button-icon"
