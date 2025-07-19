@@ -1,0 +1,16 @@
+.theme-toggle {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: var(--z-fixed);
+  font-size: var(--small-font-size);
+  background: var(--title-color-dark);
+  color: var(--body-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.theme-toggle i {
+  font-size: 1.25rem;
+}

@@ -2,7 +2,7 @@ const Social = () => {
   return (
     <div className="home-social">
       <a
-        href="https://www.linkedin.com/in/md-ehaoteshamul-islam-kisor-850567274"
+        href="https://www.linkedin.com/in/kishor-mahmud/"
         className="home-social-icon"
         target="_blank"
         rel="noreferrer noopener"

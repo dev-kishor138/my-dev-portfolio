@@ -1,33 +1,38 @@
-import { BiLogoBootstrap, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 const Frontend = () => {
     return (
         <div className="skills-content">
-            <h3 className="skills-title">Frontend Developer</h3>
+            <h3 className="skills-title">Frontend</h3>
 
             <div className="skills-box">
                 <div className="skills-group">
                     <div className="skills-data">
-                        <span className="dev-icons"><AiFillHtml5 /></span>
+                        <span className="dev-icons">
+                            <Icon icon="cib:react" />
+                        </span>
                         <div>
-                            <h3 className="skills-name">HTML</h3>
-                            <span className="skills-level">Intermediate</span>
+                            <h3 className="skills-name">React</h3>
+                            <span className="skills-level">Expert</span>
                         </div>
                     </div>
 
                     <div className="skills-data">
-                        <span className="dev-icons"><BiLogoCss3 /></span>
+                        <span className="dev-icons">
+                            <Icon icon="hugeicons:tailwindcss" />
+                        </span>
                         <div>
-                            <h3 className="skills-name">CSS</h3>
-                            <span className="skills-level">Intermediate</span>
+                            <h3 className="skills-name">Tailwind</h3>
+                            <span className="skills-level">Expert</span>
                         </div>
                     </div>
 
                     <div className="skills-data">
-                        <span className="dev-icons"><BiLogoJavascript /></span>
+                        <span className="dev-icons">
+                            <Icon icon="akar-icons:redux-fill" />
+                        </span>
                         <div>
-                            <h3 className="skills-name">Javascript</h3>
+                            <h3 className="skills-name">Redux</h3>
                             <span className="skills-level">Intermediate</span>
                         </div>
                     </div>
@@ -35,25 +40,31 @@ const Frontend = () => {
 
                 <div className="skills-group">
                     <div className="skills-data">
-                        <span className="dev-icons"><BiLogoBootstrap /></span>
+                        <span className="dev-icons">
+                            <Icon icon="teenyicons:nextjs-outline" />
+                        </span>
+                        <div>
+                            <h3 className="skills-name">Next js</h3>
+                            <span className="skills-level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div className="skills-data">
+                        <span className="dev-icons">
+                            <Icon icon="hugeicons:bootstrap" />
+                        </span>
                         <div>
                             <h3 className="skills-name">Bootstrap</h3>
-                            <span className="skills-level">Intermediate</span>
+                            <span className="skills-level">Expert</span>
                         </div>
                     </div>
 
                     <div className="skills-data">
-                        <span className="dev-icons"><BiLogoTailwindCss /></span>
+                        <span className="dev-icons">
+                            <Icon icon="mdi:material-ui" />
+                        </span>
                         <div>
-                            <h3 className="skills-name">Tailwind</h3>
-                            <span className="skills-level">Intermediate</span>
-                        </div>
-                    </div>
-
-                    <div className="skills-data">
-                        <span className="dev-icons"><BiLogoReact /></span>
-                        <div>
-                            <h3 className="skills-name">React</h3>
+                            <h3 className="skills-name">Material UI</h3>
                             <span className="skills-level">Intermediate</span>
                         </div>
                     </div>

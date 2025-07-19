@@ -17,6 +17,7 @@
 
 .about-me p {
     font-size: 14px;
+    line-height: 22px;
 }
 
 .about-info {
@@ -53,6 +54,45 @@
     margin-bottom: var(--m-2-5);
 }
 
+.button.loading {
+  background: linear-gradient(to right, var(--title-color) 50%, var(--title-color-dark) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: progress 2s linear forwards;
+  cursor: not-allowed;
+  color: var(--container-color);
+}
+
+.button.loading .button-icon {
+  animation: bounce 0.3s ease-in-out 1 forwards, spin 1s linear infinite 0.3s;
+}
+
+@keyframes progress {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 

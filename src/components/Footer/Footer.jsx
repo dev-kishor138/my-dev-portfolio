@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="footer-container container">
         <h1 className="footer-title">Kishor</h1>
 
-        <ul className="footer-list">
+        {/* <ul className="footer-list">
           <li>
             <a href="#about" className="footer-link">
               About
@@ -24,11 +24,11 @@ const Footer = () => {
               Testimonials
             </a>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="footer-social">
           <a
-            href="https://www.linkedin.com/in/md-ehaoteshamul-islam-kisor-850567274"
+            href="https://www.linkedin.com/in/kishor-mahmud/"
             className="footer-social-icon"
             target="_blank"
             rel="noreferrer noopener"

@@ -1,146 +1,68 @@
-import Image1 from "../../assets/Projects/project13.png";
-import Image2 from "../../assets/Projects/project2.png";
-import Image3 from "../../assets/Projects/project3.png";
-import Image4 from "../../assets/Projects/project4.png";
-import Image5 from "../../assets/Projects/project5.png";
-import Image6 from "../../assets/Projects/project7.png";
-import Image7 from "../../assets/Projects/project8.png";
-import Image8 from "../../assets/Projects/project9.png";
-import Image9 from "../../assets/Projects/project10.png";
-import Image10 from "../../assets/Projects/project11.png";
-import Image11 from "../../assets/Projects/project12.png";
-import Image12 from "../../assets/Projects/project1.png";
-import Image13 from "../../assets/Projects/project6.png";
-import Image14 from "../../assets/Projects/project14.png";
-import Image15 from "../../assets/Projects/project15.png";
-import Image16 from "../../assets/Projects/image16.png"
+import Image1 from "../../assets/Projects/accountant-2.PNG";
+import Image2 from "../../assets/Projects/pos.webp";
+import Image3 from "../../assets/Projects/projects.PNG";
+import Image4 from "../../assets/Projects/glowthetic.PNG";
+import Image5 from "../../assets/Projects/engineering.PNG";
+// import Image6 from "../../assets/Projects/sobrokom.PNG";
 
 export const projectsData = [
   {
     id: 1,
     image: Image1,
-    title: "Dev Portfolio",
+    title: "Accounting Software",
     category: "react",
-    link: "https://react-developer-template.vercel.app/",
+    link: "https://accountant.eclipseintellitech.com/sale-dashboard",
+    technology: ["PHP", "Laravel", "MySQL"],
+    description:
+      "This Accounting Software is a comprehensive solution designed to streamline financial operations for businesses. Built with a robust set of features, it supports product creation, sales and purchase invoices, expense tracking, payroll, and salary management. The platform enables efficient supplier and customer management, bank and ledger management, loan and transaction tracking, conveyance bills, and asset management. Additionally, it offers service sales, department and employee management, leave and branch management, CRM, and role-based permission controls, providing an all-in-one tool for seamless financial and operational management.",
   },
   {
     id: 2,
-    image: Image12,
-    title: "Personal Portfolio",
+    image: Image2,
+    title: "POS Software",
     category: "react",
-    link: "https://portfolio-1-0-psi.vercel.app/",
+    link: "https://demo.eclipseposapp.com/",
+    technology: ["PHP", "Laravel", "MySQL"],
+    description:
+      "This POS Software is a comprehensive point-of-sale solution designed to streamline business operations. Built with powerful features, it supports product creation, sales and purchase invoices, expense tracking, and salary management. The platform enables efficient supplier and customer management, bank and transaction management, employee and branch management, CRM, and role-based permission controls. With its intuitive interface, the software ensures seamless financial and operational management for businesses of all sizes.",
   },
   {
     id: 3,
     image: Image3,
-    title: "Football Maniya",
+    title: "Projects Mangement Software",
     category: "website",
-    link: "https://footbal-maniya.vercel.app/",
+    link: "https://projects.eclipseintellitech.com/",
+    technology: ["PHP", "Laravel", "MySQL", "React", "Redux"],
+    description:
+      "This Project Management Software is a robust and user-friendly platform built with Laravel and React Inertia, designed to enhance team collaboration and streamline project workflows. It enables seamless project assignment, deadline tracking, and task status monitoring, ensuring efficient resource management. With its modern and responsive interface, the software empowers teams to stay organized, productive, and aligned, making it an ideal solution for managing projects of any scale.",
   },
   {
     id: 4,
     image: Image4,
-    title: "Country Guide",
+    title: "Glowthentic E-commerce",
     category: "design",
-    link: "https://country-guide-api.vercel.app/",
+    link: "https://glowthentic.store/",
+    technology: ["PHP", "Laravel", "MySQL", "React", "Redux"],
+    description:
+      "Glowthentic is a feature-rich e-commerce platform built with a robust Laravel backend API and a dynamic React frontend. It offers a seamless shopping experience with advanced search and filtering, promotion management, cart and wishlist management, secure checkout, and order tracking. The platform includes comprehensive user management, a blog, and a powerful CRM system. Additionally, it supports order management with multiple delivery options and efficient content management, making it an all-in-one solution for modern e-commerce needs.",
   },
   {
     id: 5,
     image: Image5,
-    title: "Analog Watch",
+    title: "Dynamic Agency Website",
     category: "design",
-    link: "https://analog-clock-create-by-html-css-and-javascript.vercel.app/",
+    link: "https://eclipseengineeringltd.com/",
+    technology: ["PHP", "Laravel", "MySQL",],
+    description:
+      "Dynamic Agency Website is a powerful and flexible platform built with Laravel, designed for seamless content management and analytics. It features an intuitive admin dashboard that allows administrators to create, update, and delete website content effortlessly. The system also includes robust visitor tracking and traffic monitoring capabilities, providing valuable insights into user engagement. With its modern architecture, the website ensures a dynamic and scalable solution for agencies to manage their online presence effectively.",
   },
-  {
-    id: 6,
-    image: Image6,
-    title: "Digital Clock",
-    category: "design",
-    link: "https://analog-clock-henna.vercel.app/",
-  },
-  {
-    id: 7,
-    image: Image7,
-    title: "Password Strength Checker",
-    category: "design",
-    link: "https://password-validation-omega.vercel.app/",
-  },
-  {
-    id: 8,
-    image: Image8,
-    title: "Ema-John",
-    category: "react",
-    link: "https://gorgeous-jalebi-c0aa4f.netlify.app/",
-  },
-  {
-    id: 9,
-    image: Image9,
-    title: "College Portfolio",
-    category: "website",
-    link: "https://our-college-projects.vercel.app/",
-  },
-  {
-    id: 10,
-    image: Image10,
-    title: "Programming Hero Clone",
-    category: "website",
-    link: "https://hack-programming-hero-api-project.vercel.app/",
-  },
-  {
-    id: 11,
-    image: Image11,
-    title: "Looplab",
-    category: "website",
-    link: "https://bootstrap-4-projects.vercel.app/",
-  },
-  {
-    id: 12,
-    image: Image2,
-    title: "Food Donate",
-    category: "website",
-    link: "https://food-donate-2nd-projects.vercel.app/",
-  },
-  {
-    id: 13,
-    image: Image13,
-    title: "Travel Blog",
-    category: "website",
-    link: "https://blog-website-khaki.vercel.app/",
-  },
-  {
-    id: 14,
-    image: Image14,
-    title: "ToDo App",
-    category: "design",
-    link: "https://to-do-app-three-theta.vercel.app/",
-  },
-  {
-    id: 15,
-    image: Image15,
-    title: "Family Tree",
-    category: "design",
-    link: "https://github.com/dev-kishor138/Family-tree",
-  },
-  {
-    id: 16,
-    image: Image16,
-    title: "Simple Portfolio",
-    category: "react",
-    link: "https://portfolio-3-0-plum.vercel.app/",
-  },
-];
-
-export const projectsNav = [
-  {
-    name: "all",
-  },
-  {
-    name: "react",
-  },
-  {
-    name: "website",
-  },
-  {
-    name: "design",
-  },
+  // {
+  //   id: 6,
+  //   image: Image6,
+  //   title: "Sobrokom E-commerce",
+  //   category: "design",
+  //   link: "https://analog-clock-henna.vercel.app/",
+  //   description:
+  //     "This is a sample description for Project One. It includes details about the project, its features, and the technologies used. This project showcases a responsive design with modern UI/UX principles.",
+  // },
 ];

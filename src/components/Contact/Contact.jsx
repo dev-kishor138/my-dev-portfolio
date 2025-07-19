@@ -1,8 +1,7 @@
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import { useRef } from "react";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from "react-toastify";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -10,19 +9,34 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_am9kbsm",
-      "template_46msg38",
-      form.current,
-      "VZ816vykUK5zC0Jy1"
-    );
-    e.target.reset();
-    toast("Send message successfully");
+    emailjs
+      .sendForm(
+        "service_am9kbsm",
+        "template_46msg38",
+        form.current,
+        "VZ816vykUK5zC0Jy1"
+      )
+      .then(
+        (result) => {
+          // Check status code for success
+          if (result.status === 200) {
+            toast.success("Message sent successfully!");
+            e.target.reset(); // Reset form after success
+          } else {
+            toast.error("Failed to send message. Please try again.");
+          }
+        },
+        (error) => {
+          // Handle errors
+          console.error("Error:", error);
+          toast.error("An error occurred. Please try again later.");
+        }
+      );
   };
 
   return (
     <section className="contact section" id="contact">
-      <ToastContainer />
+    
       <h2 className="section-title">Contact Me</h2>
       <span className="section-subtitle">Say Hello</span>
 
@@ -42,23 +56,23 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Write me{" "}
+                Mail me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
               </a>
             </div>
 
             <div className="contact-card">
-              <i className="bx bxl-instagram contact-card-icon"></i>
-              <h3 className="contact-card-title">Instagram</h3>
-              <span className="contact-card-data">@kishormahmud9</span>
+              <i className="bx bxl-whatsapp contact-card-icon"></i>
+              <h3 className="contact-card-title">Whatsapp</h3>
+              <span className="contact-card-data">+880 1723-343865</span>
 
               <a
-                href="https://instagram.com/kishormahmud9?igshid=MzNlNGNkZWQ4Mg=="
+                href="https://wa.me/8801723343865"
                 className="contact-button"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Write me{" "}
+                Message me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
               </a>
             </div>
@@ -74,7 +88,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Write me{" "}
+                Connect me{" "}
                 <i className="bx bx-right-arrow-alt contact-button-icon"></i>
               </a>
             </div>

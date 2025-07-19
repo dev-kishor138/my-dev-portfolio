@@ -1,168 +1,226 @@
 .services-container {
-    grid-template-columns: repeat(3, 270px);
-    justify-content: center;
-    column-gap: 1.8rem;
+  grid-template-columns: repeat(3, 270px);
+  justify-content: center;
+  column-gap: 1.8rem;
+}
+.animated-Service-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-conic-gradient(
+    from var(--a),
+    var(--title-color) 0%,
+    var(--title-color) 5%,
+    transparent 5%,
+    transparent 35%,
+    var(--title-color) 50%
+  );
+  border-radius: 20px;
+  animation: animate 4s linear infinite;
+  overflow: hidden;
 }
 
-.services-content {
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--container-color);
-    padding: 6rem 0 2rem 2.5rem;
+.animated-Service-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    var(--text-color) 0%,
+    var(--text-color) 5%,
+    transparent 5%,
+    transparent 35%,
+    var(--text-color) 50%
+  );
+  border-radius: 20px;
+  animation: animate 4s linear infinite;
+  animation-delay: -1s;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+
+  100% {
+    --a: 360deg;
+  }
+}
+
+.animated-Service-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #fafafa;
+  border-radius: 20px;
+  border: 2px solid #fafafa;
+}
+
+.animated-Service-card .services-content {
+  position: relative;
+  width: 95%;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  /* background-color: var(--container-color); */
+  padding: 6rem 1.5rem 3rem;
+  border-radius: 20px;
+  transition: ease-in-out 0.2;
+  z-index: var(--z-tooltip);
 }
 
 .services-icon {
-    display: block;
-    font-size: 2rem;
-    color: var(--title-color-dark);
-    margin-bottom: var(--m-1);
+  display: block;
+  font-size: 2rem;
+  color: var(--title-color-dark);
+  margin-bottom: var(--m-1);
 }
 
 .services-title {
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--m-1);
-    font-weight: var(--font-medium);
-    color: var(--title-color-dark);
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--m-1);
+  font-weight: var(--font-medium);
+  color: var(--title-color-dark);
 }
 
 .services-button {
-    color: var(--title-color);
-    font-size: var(--small-font-size);
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.25rem;
-    cursor: pointer;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
 }
 
 .services-button-icon {
-    font-size: 1rem;
-    transition: 0.3s;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 .services-button:hover .services-button-icon {
-    transform: translateX(0.25rem);
+  transform: translateX(0.25rem);
 }
 
 .services-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: var(--z-modal);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
 .services-modal-content {
-    width: 500px;
-    position: relative;
-    background-color: var(--container-color);
-    padding: 4.5rem 2.5rem 2.5rem;
-    border-radius: 1.5rem;
+  width: 500px;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 4.5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
 }
 
 .services-modal-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    color: var(--title-color);
-    cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
 }
 
 .services-modal-title,
 .services-modal-description {
-    text-align: center;
+  text-align: center;
 }
 
-
-
-
 .services-modal-title {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--m-1);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--m-1);
 }
 
 .services-modal-description {
-    margin-bottom: var(--m-1);
+  margin-bottom: var(--m-1);
 }
 
 .services-modal-services {
-    row-gap: 0.75rem;
+  row-gap: 0.75rem;
 }
 
 .services-modal-services-item {
-    display: flex;
-    align-items: center;
-    column-gap: .5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
 .services-modal-icon {
-    color: var(--title-color);
-    font-size: 1.1rem;
+  color: var(--title-color);
+  font-size: 1.1rem;
 }
 
 .services-modal-info {
-    font-size: var(--small-font-size);
+  font-size: var(--small-font-size);
 }
 
 /* Active Modal  */
 .active-modal {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
-
 
 /*========== BreakPoints ==========*/
 /* For Large Device */
 @media screen and (max-width: 992px) {
-    .services-container {
-        grid-template-columns: repeat(3, 218px);
-    }
+  .services-container {
+    grid-template-columns: repeat(3, 218px);
+  }
 }
 
 /* For Medium Device */
 @media screen and (max-width: 768px) {
-    .services-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .services-content {
-        padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-    }
+  .services-content {
+    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  }
 
-    .services-icon {
-        font-size: 1.5rem;
-    }
+  .services-icon {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .services-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    .services-modal-content {
-        padding: 4.5rem 1.5rem 2.5rem;
-    }
+  .services-modal-content {
+    padding: 4.5rem 1.5rem 2.5rem;
+  }
 
-    .services-modal-description {
-        padding: 0;
-    }
+  .services-modal-description {
+    padding: 0;
+  }
 }
 
 /* For Small Device */
 @media screen and (max-width: 350px) {
-
-
-    .services-content {
-        padding-right: 6rem;
-    }
+  .services-content {
+    padding-right: 6rem;
+  }
 }

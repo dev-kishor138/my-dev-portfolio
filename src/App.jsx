@@ -1,4 +1,4 @@
-
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
@@ -8,27 +8,22 @@ import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Qualification from "./components/Qualification/Qualification";
 import ScrollUp from "./components/ScrollUp/ScrollUp";
-import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
-import Testimonial from "./components/Testimonial/Testimonial";
-
-
 
 function App() {
   return (
     <>
-
+      <Toaster position="top-center" reverseOrder={false} />
+      {/* <ThemeToggle /> */}
       <Header></Header>
-
-
       <main className="main">
         <Home></Home>
         <About></About>
         <Skills></Skills>
-        <Services></Services>
+        {/* <Services></Services> */}
         <Qualification></Qualification>
         <Projects></Projects>
-        <Testimonial></Testimonial>
+        {/* <Testimonial></Testimonial> */}
         <Contact></Contact>
       </main>
 

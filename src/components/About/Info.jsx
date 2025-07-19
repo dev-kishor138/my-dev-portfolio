@@ -1,28 +1,26 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 
 const Info = () => {
   return (
     <div className="about-info grid">
       <div className="about-box">
-        <i className="bx bx-code-alt about-icon"></i>
-        <h3 className="about-title">Course</h3>
-        <span className="about-subtitle">Completed 2</span>
+        <Icon icon="mdi:achievement-outline" className="about-icon" />
+        <h3 className="about-title">3+ Years</h3>
+        <span className="about-subtitle"> Experience</span>
       </div>
 
       <div className="about-box">
-        <i className="bx bx-briefcase about-icon"></i>
-        <h3 className="about-title">Completed</h3>
-        <span className="about-subtitle">30+ projects</span>
+        <Icon icon="solar:code-bold" className="about-icon" />
+        <h3 className="about-title">30+ Projects</h3>
+        <span className="about-subtitle"> Completed</span>
       </div>
+
       <div className="about-box">
-        <i className="bx bx-award about-icon"></i>
-        <h3 className="about-title">Experience</h3>
-        <span className="about-subtitle">0 Years</span>
+        <Icon icon="fluent:people-16-regular" className="about-icon" />
+        <h3 className="about-title">70+ Happy</h3>
+        <span className="about-subtitle">Customer</span>
       </div>
-
-
-
-
     </div>
   );
 };

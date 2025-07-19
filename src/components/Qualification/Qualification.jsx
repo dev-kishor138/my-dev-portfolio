@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Qualification.css";
+import SectionHeader from "../global/SectionHeader";
 
 const Qualification = () => {
   const [active, setActive] = useState(1);
@@ -8,10 +9,50 @@ const Qualification = () => {
     setActive(index);
   };
 
+  const qualificationsData = [
+    {
+      id: 1,
+      type: "Education",
+      title: "BSC",
+      subtitle: "Northern University Bangladesh",
+      calendar: "2023 - Present",
+    },
+    {
+      id: 2,
+      type: "Education",
+      title: "Diploma In Engineering",
+      subtitle: "Rangpur Polytechnic Institute",
+      calendar: "2018 - 2022",
+    },
+    {
+      id: 3,
+      type: "Education",
+      title: "Secondary School Certificate (SSC)",
+      subtitle: "Rangpur Technical School and College",
+      calendar: "2016 - 2018",
+    },
+    {
+      id: 4,
+      type: "Experience",
+      title: "Full Stack Developer",
+      subtitle: "Eclipse Intellitech LTD",
+      calendar: "Aug 2023 - Present",
+    },
+    {
+      id: 5,
+      type: "Experience",
+      title: "Web Developer",
+      subtitle: "E-Learning and Earning LTD",
+      calendar: "Oct 2022 - Mar 2023",
+    },
+  ];
+
   return (
     <section className="qualification section" id="qualification">
-      <h2 className="section-title">Qualification</h2>
-      <span className="section-subtitle">What I have Done In my Life</span>
+      <SectionHeader
+        title="Qualification"
+        subTitle="What I have Done In my Life"
+      />
 
       <div className="qualification-container container">
         <div className="qualification-tabs">
@@ -36,7 +77,7 @@ const Qualification = () => {
             onClick={() => activeToggle(2)}
           >
             <i className="uil uil-briefcase-alt qualification-icon"></i>{" "}
-            Course
+            Experiences
           </div>
         </div>
 
@@ -48,75 +89,42 @@ const Qualification = () => {
                 : "qualification-content"
             }
           >
-            <div className="qualification-data">
-              <div>
-                <h3 className="qualification-title">Diploma In Engineering</h3>
-                <span className="qualification-subtitle">
-                  Rangpur Polytechnic Institute
-                </span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2018 - 2023
+            {qualificationsData
+              .filter((item) => item.type === "Education")
+              .map((item) => (
+                <div key={item.id} className="qualification-data">
+                  {item.id % 2 === 0 ? (
+                    <>
+                      <div></div>
+
+                      <div>
+                        <span className="qualification-rounder"></span>
+                        <span className="qualification-line"></span>
+                      </div>
+                    </>
+                  ) : (
+                    ""
+                  )}
+                  <div>
+                    <h3 className="qualification-title">{item.title}</h3>
+                    <span className="qualification-subtitle">
+                      {item.subtitle}
+                    </span>
+                    <div className="qualification-calendar">
+                      <i className="uil uil-calendar-alt"></i> {item.calendar}
+                    </div>
+                  </div>
+
+                  {item.id % 2 !== 0 ? (
+                    <div>
+                      <span className="qualification-rounder"></span>
+                      <span className="qualification-line"></span>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
-              </div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-            </div>
-
-            <div className="qualification-data">
-              <div></div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification-title">
-                  Secondary School Certificate (SSC)
-                </h3>
-                <span className="qualification-subtitle">
-                  Rangpur Technical School and College
-                </span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2016 - 2018
-                </div>
-              </div>
-            </div>
-
-            {/* <div className="qualification-data">
-              <div>
-                <h3 className="qualification-title">SSC</h3>
-                <span className="qualification-subtitle">Deuty school</span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - Present
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-            </div> */}
-
-            {/* <div className="qualification-data">
-              <div></div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification-title">SSC</h3>
-                <span className="qualification-subtitle">Deuty school</span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - Present
-                </div>
-              </div>
-            </div> */}
+              ))}
           </div>
 
           <div
@@ -126,68 +134,43 @@ const Qualification = () => {
                 : "qualification-content"
             }
           >
-            <div className="qualification-data">
-              <div></div>
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-              <div>
-                <h3 className="qualification-title">Web Development with MERN</h3>
-                <span className="qualification-subtitle">
-                  E-Learning and Earning LTD
-                </span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> Oct 2022 - Dec 2022
+            {qualificationsData
+              .filter((item) => item.type === "Experience")
+              .map((item) => (
+                <div key={item.id} className="qualification-data">
+                  {item.id % 2 === 0 ? (
+                    <>
+                      <div></div>
+
+                      <div>
+                        <span className="qualification-rounder"></span>
+                        <span className="qualification-line"></span>
+                      </div>
+                    </>
+                  ) : (
+                    ""
+                  )}
+
+                  <div>
+                    <h3 className="qualification-title">{item.title}</h3>
+                    <span className="qualification-subtitle">
+                      {item.subtitle}
+                    </span>
+                    <div className="qualification-calendar">
+                      <i className="uil uil-calendar-alt"></i> {item.calendar}
+                    </div>
+                  </div>
+
+                  {item.id % 2 !== 0 ? (
+                    <div>
+                      <span className="qualification-rounder"></span>
+                      <span className="qualification-line"></span>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
-              </div>
-            </div>
-
-            <div className="qualification-data">
-              <div>
-                <h3 className="qualification-title">Programming With Javascript</h3>
-                <span className="qualification-subtitle">Free Code Camp</span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> Oct 2021 - 12 2021
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-            </div>
-
-            {/* <div className="qualification-data">
-              <div></div>
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification-title">SSC</h3>
-                <span className="qualification-subtitle">Deuty school</span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - Present
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="qualification-data">
-              <div>
-                <h3 className="qualification-title">SSC</h3>
-                <span className="qualification-subtitle">Deuty school</span>
-                <div className="qualification-calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - Present
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification-rounder"></span>
-                <span className="qualification-line"></span>
-              </div>
-            </div> */}
+              ))}
           </div>
         </div>
       </div>

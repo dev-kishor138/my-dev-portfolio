@@ -1,5 +1,5 @@
 /*========== Google Fonts ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 
 /*========== Variable Css ==========*/
@@ -7,16 +7,14 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  /* --title-color: #333333; */
   --title-color: #0c897a;
-  --title-color-dark: #000;
-  /* --text-color: #757575; */
-  --text-color: #f7df1d;
+  --title-color-dark: #000000;
+  --text-color: #757575;
   --body-color: #FAF3F0;
-  --container-color: #fff;
+  --container-color: #ffffff;
 
   /*========== Fonts ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Comfortaa", sans-serif;
   --big-font-size: 3.5rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -47,6 +45,15 @@
 
 }
 
+/*========== Dark Mode Colors ==========*/
+#root[data-theme="dark"] {
+  --title-color: #2AD1BF;
+  --title-color-dark: #1A998A;
+  --text-color: #CBD5E0;
+  --body-color: #1A202C;
+  --container-color: #2D3748;
+}
+
 /*========== Responsive Typography ==========*/
 @media screen and (max-width: 992px) {
   :root {
@@ -66,7 +73,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: var(--body-font);
 }
 
 html {
@@ -77,13 +84,13 @@ body,
 button,
 input,
 textarea {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--body-font);
   font-size: 0.938rem;
 }
 
 body {
-  background-color: #FAFAFA;
-  color: #757575;
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 h1,
@@ -127,6 +134,7 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  margin-top: 10px;
 }
 
 .section-title,
@@ -162,7 +170,26 @@ img {
 }
 
 .button-icon {
-  margin-left: var(--m-0-5);
+    font-size: 1.25rem;
+    margin-left: var(--m-0-5);
+    color: var(--container-color);
+    vertical-align: middle;
+}
+
+.animate-icon {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .button-flex {
@@ -186,6 +213,7 @@ img {
   .button-icon {
     width: 22px;
     height: 22px;
+    font-size: 1rem;
   }
 }
 
@@ -194,9 +222,16 @@ img {
   .section {
     padding: 2rem 0 4rem;
   }
+  .section-subtitle {
+    margin-bottom: 2rem;
+  }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+  .button-icon {
+        font-size: 0.875rem;
+    }
+}
 
 /* For Small Device */
 @media screen and (max-width: 350px) {

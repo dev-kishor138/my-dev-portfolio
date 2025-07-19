@@ -1,5 +1,3 @@
-
-
 const Project = ({ data }) => {
   const { image, title, link } = data;
   return (
@@ -8,10 +6,17 @@ const Project = ({ data }) => {
         <img src={image} alt="" />
       </div>
 
-      <h3 className="project-title">{title}</h3>
-      <a href={link} target="_blank" rel="noreferrer noopener" className="project-button">
-        Demo <i className="bx bx-right-arrow-alt project-button-icon"></i>
-      </a>
+      <div className="project-content">
+        <h3 className="project-title">{title}</h3>
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="project-button"
+        >
+          Demo <i className="bx bx-right-arrow-alt project-button-icon"></i>
+        </a>
+      </div>
     </div>
   );
 };

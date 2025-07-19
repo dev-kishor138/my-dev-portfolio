@@ -58,6 +58,7 @@
     display: inline-block;
     font-size: var(--small-font-size);
     margin-bottom: var(--m-1);
+    margin-top: 7px;
 }
 
 .qualification-calendar {

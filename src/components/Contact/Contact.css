@@ -41,6 +41,7 @@
 .contact-card-title {
     font-weight: var(--font-medium);
     color: var(--title-color-dark);
+    margin-bottom: 0.5rem;
 }
 
 .contact-card-data {

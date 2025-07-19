@@ -33,7 +33,7 @@
     background-color: var(--body-color);
     color: var(--title-color);
     font-size: 1.25rem;
-    padding: 0.1rem 0.4rem;
+    padding: 0.4rem 0.4rem;
     border-radius: 0.5rem;
     display: inline-flex;
 }

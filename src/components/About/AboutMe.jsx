@@ -4,7 +4,10 @@ const AboutMe = () => {
   return (
     <div className="grid about-me">
       <p>
-        My name is Ehaoteshamul Islam Kisor. I work as a full-stack web developer. I am really passionate about web development. when I finished the JavaScript Programming course. Here, I developed a strong foundation in web development principles, languages, and technologies, such as HTML, CSS, and JavaScript. Using Raw CSS, I built a few responsive websites. For a better user interface, I occasionally utilize Tailwind. Then I develop a project using the DOM and API. I post some code samples and a straightforward JavaScript project on GitHub. <br /> <br /> After that, I successfully completed an industrial training program in web development using MERN Stack at E-Learning and Earning LTD. Here, I can sharpen my Full MERN Stack Development skills.I developed a notion for using the MERN stack for whole website building. a solid understanding of the MERN Stack Technology as well as certain new technologies (such Axios, Firebase, Strapi, and JWT). These technologies have been used in some of my projects. Right now, I'm honing my technical skills.
+        I’m Ehaoteshamul Islam Kisor, a dedicated Full-Stack Web Developer with over two years of hands-on experience at Eclipse Intellitech Ltd. At Eclipse, I’ve played a pivotal role in crafting dynamic, high-performance web solutions, including e-commerce platforms, POS systems, accounting software, and task management tools, primarily using Laravel and React. My work focuses on delivering seamless user experiences and robust backend architectures, ensuring scalability and efficiency.
+        <br />
+        <br />
+        Previously, during my internship at E-Learning and Earning LTD, I sharpened my skills in the MERN stack, building responsive and scalable applications with MongoDB, Express.js, React, and Node.js. I’m well-versed in modern tools like Next.js, Tailwind CSS, Axios, Firebase, Strapi, and JWT, which I leverage to create intuitive and innovative solutions. My recent projects at Eclipse Intellitech, including complex APIs and responsive frontends, reflect my commitment to pushing the boundaries of web development. Check out my GitHub for a glimpse into my work and passion for creating impactful digital experiences.
       </p>
     </div>
   );
