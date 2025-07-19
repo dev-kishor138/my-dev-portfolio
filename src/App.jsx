@@ -9,6 +9,7 @@ import Projects from "./components/Projects/Projects";
 import Qualification from "./components/Qualification/Qualification";
 import ScrollUp from "./components/ScrollUp/ScrollUp";
 import Skills from "./components/Skills/Skills";
+import Services from "./components/Services/Services";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Home></Home>
         <About></About>
         <Skills></Skills>
-        {/* <Services></Services> */}
+        <Services></Services>
         <Qualification></Qualification>
         <Projects></Projects>
         {/* <Testimonial></Testimonial> */}
