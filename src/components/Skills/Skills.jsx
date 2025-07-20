@@ -58,10 +58,10 @@ const Skills = () => {
         },
     ];
     return (
-        <section className="skills section" id="skills">
+        <section className="skills container section" id="skills">
             <SectionHeader title="Skills" subTitle="My Technical level" />
 
-            <div className="skills-container container grid">
+            <div className="skills-container grid">
                 {skillsData.map((skillCategory, index) => (
                     <div key={index} className="skills-content">
                         <h3 className="skills-title">{skillCategory.category}</h3>

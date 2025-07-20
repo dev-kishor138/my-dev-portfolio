@@ -98,7 +98,8 @@
     left: 1.25rem;
     font-size: var(--smaller-font-size);
     padding: 0.25rem;
-    background: var(--body-color);
+    /* background: var(--body-color); */
+    background: #ffffff;
     z-index: 10;
 }
 

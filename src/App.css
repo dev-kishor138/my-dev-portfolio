@@ -1,6 +1,5 @@
 /*========== Google Fonts ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
 /*========== Variable Css ==========*/
 #root {
@@ -10,7 +9,7 @@
   --title-color: #0c897a;
   --title-color-dark: #000000;
   --text-color: #757575;
-  --body-color: #FAF3F0;
+  --body-color: #faf3f0;
   --container-color: #ffffff;
 
   /*========== Fonts ==========*/
@@ -42,16 +41,15 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
-
 }
 
 /*========== Dark Mode Colors ==========*/
 #root[data-theme="dark"] {
-  --title-color: #2AD1BF;
-  --title-color-dark: #1A998A;
-  --text-color: #CBD5E0;
-  --body-color: #1A202C;
-  --container-color: #2D3748;
+  --title-color: #2ad1bf;
+  --title-color-dark: #1a998a;
+  --text-color: #cbd5e0;
+  --body-color: #1a202c;
+  --container-color: #2d3748;
 }
 
 /*========== Responsive Typography ==========*/
@@ -66,7 +64,6 @@
     --smaller-font-size: 0.75rem;
   }
 }
-
 
 /*========== Base ==========*/
 * {
@@ -119,7 +116,6 @@ img {
   height: auto;
 }
 
-
 /*========== Reusable css Classes ==========*/
 .section {
   padding: 6rem 0 2rem;
@@ -151,13 +147,13 @@ img {
 
 .grid {
   display: grid;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 /*========== Buttons ==========*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
+  background-color: var(--title-color-dark);
   color: var(--container-color);
   padding: 0.9rem 2rem;
   border-radius: 1rem;
@@ -166,37 +162,36 @@ img {
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--title-color);
 }
 
 .button-icon {
-    font-size: 1.25rem;
-    margin-left: var(--m-0-5);
-    color: var(--container-color);
-    vertical-align: middle;
+  font-size: 1.25rem;
+  margin-left: var(--m-0-5);
+  color: var(--container-color);
+  vertical-align: middle;
 }
 
 .animate-icon {
-    animation: pulse 2s infinite ease-in-out;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .button-flex {
   display: inline-flex;
   align-items: center;
 }
-
 
 /*========== BreakPoints ==========*/
 /* For Large Device */
@@ -229,8 +224,8 @@ img {
 
 @media screen and (max-width: 576px) {
   .button-icon {
-        font-size: 0.875rem;
-    }
+    font-size: 0.875rem;
+  }
 }
 
 /* For Small Device */

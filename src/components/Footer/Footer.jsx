@@ -5,27 +5,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container container">
         <h1 className="footer-title">Kishor</h1>
-
-        {/* <ul className="footer-list">
-          <li>
-            <a href="#about" className="footer-link">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#projects" className="footer-link">
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a href="#testimonials" className="footer-link">
-              Testimonials
-            </a>
-          </li>
-        </ul> */}
-
         <div className="footer-social">
           <a
             href="https://www.linkedin.com/in/kishor-mahmud/"

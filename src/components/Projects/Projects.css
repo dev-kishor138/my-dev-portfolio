@@ -1,5 +1,5 @@
 .projects-container {
-  width: 750px;
+  /* width: 750px; */
   transition: all 0.3s ease;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--container-color);
   border-radius: 1rem;
   max-width: 900px;
   width: 90%;
@@ -124,6 +124,23 @@
   padding: 2rem;
   transform: scale(0.8);
   animation: scaleIn 0.3s ease forwards;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--title-color) var(--container-color);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: var(--container-color);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--title-color);
+  border-radius: 4px;
 }
 
 .modal-close {
@@ -135,6 +152,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 10;
 }
 
 .modal-close:hover {
@@ -166,8 +184,10 @@
   margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
+
 .modal-details .project-tec {
   display: flex;
+  flex-wrap: wrap;
   justify-content: strat;
   align-items: center;
   gap: 0.5rem;
@@ -233,7 +253,7 @@
 /*========== BreakPoints ==========*/
 /* For Large Device */
 @media screen and (max-width: 992px) {
-  .testimonial-container {
+  .projects-container {
     width: initial;
   }
 
@@ -255,6 +275,16 @@
   .modal-image img {
     max-width: 100%;
   }
+
+  .modal-details .project-tec {
+    flex-wrap: wrap;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
 }
 
 /* For Small Device */
@@ -265,6 +295,32 @@
 
   .project-buttons {
     gap: 0.5rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-body {
+    gap: 1rem;
+  }
+
+  .modal-image img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .modal-details {
+    font-size: var(--small-font-size);
+  }
+
+  .modal-close {
+    font-size: 1.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 

@@ -9,6 +9,28 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Get form data
+    const formData = new FormData(form.current);
+    const name = formData.get("name")?.trim();
+    const email = formData.get("email")?.trim();
+
+    // Validation
+    if (!name) {
+      toast.error("Please enter your name.");
+      return;
+    }
+    if (!email) {
+      toast.error("Please enter your email.");
+      return;
+    }
+
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_am9kbsm",
@@ -36,8 +58,7 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-    
-      <h2 className="section-title">Contact Me</h2>
+      <h2 className="section-title">Get in Touch</h2>
       <span className="section-subtitle">Say Hello</span>
 
       <div className="contact-container container grid">
@@ -78,12 +99,12 @@ const Contact = () => {
             </div>
 
             <div className="contact-card">
-              <i className="bx bxl-facebook contact-card-icon"></i>
-              <h3 className="contact-card-title">Facebook</h3>
-              <span className="contact-card-data">Kîśhøŕ Mähmůđ</span>
+              <i className="bx bxl-linkedin contact-card-icon"></i>
+              <h3 className="contact-card-title">LinkedIn</h3>
+              <span className="contact-card-data">Kishor Mahmud</span>
 
               <a
-                href="https://www.facebook.com/kishor.mahmud.009"
+                href="https://www.linkedin.com/in/kishor-mahmud/"
                 className="contact-button"
                 target="_blank"
                 rel="noreferrer noopener"

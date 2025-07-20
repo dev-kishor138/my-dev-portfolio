@@ -2,6 +2,7 @@ import "./Projects.css";
 import { projectsData } from "./ProjectsData";
 import SectionHeader from "../global/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -39,11 +40,15 @@ const Projects = () => {
       />
 
       <Swiper
-        className="testimonial-container"
+        className="projects-container"
         loop={true}
-        autoplay={true}
+        // autoplay={{
+        //   delay: 5000, 
+        //   disableOnInteraction: false,
+        // }}
         grabCursor={true}
         spaceBetween={24}
+        // modules={[Autoplay]}
         breakpoints={{
           576: {
             slidesPerView: 2,

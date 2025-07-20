@@ -7,8 +7,15 @@ export default defineConfig({
   plugins: [react()],
    assetsInclude: ['**/*.PNG'],
   server: {
+    host: '0.0.0.0', 
+    port: 5173, 
     hmr: {
-      overlay: false 
+      overlay: false
+    }
+  },
+  resolve: {
+    alias: {
+      'swiper/modules': 'swiper'
     }
   }
 })

@@ -3,7 +3,7 @@ import "./Qualification.css";
 import SectionHeader from "../global/SectionHeader";
 
 const Qualification = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(2);
 
   const activeToggle = (index) => {
     setActive(index);

@@ -1,9 +1,9 @@
 .skills-container {
-  padding: 0 var(--m-1);
+  /* padding: 0 var(--m-1); */
 }
 
 .skills-content {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -71,7 +71,7 @@
 /* For Medium Device */
 @media screen and (max-width: 576px) {
   .skills-content {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 
   .skills-card {

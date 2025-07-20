@@ -43,5 +43,5 @@
     margin-top: 2rem;
     text-align: center;
     font-size: var(--smaller-font-size);
-    color: var(--text-color);
+    color: var(--body-color);
 }

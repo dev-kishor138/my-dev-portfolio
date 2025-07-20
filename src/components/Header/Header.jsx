@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
 
 const Header = () => {
@@ -12,6 +12,33 @@ const Header = () => {
   // toggle Menu
   const [toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
+
+  // Handle outside click to close menu
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      const menu = document.querySelector(".nav-menu");
+      const toggleButton = document.querySelector(".nav-toggle");
+
+      // Check if click is outside both menu and toggle button
+      if (
+        toggle &&
+        menu &&
+        toggleButton &&
+        !menu.contains(e.target) &&
+        !toggleButton.contains(e.target)
+      ) {
+        showMenu(false); // Hide menu
+      }
+    };
+
+    // Add event listener for clicks
+    document.addEventListener("click", handleOutsideClick);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [toggle]);
 
   return (
     <header className="header">
@@ -78,7 +105,8 @@ const Header = () => {
                     : "nav-link"
                 }
               >
-                <i className="uil uil-graduation-cap nav-icon"></i> Qualification
+                <i className="uil uil-graduation-cap nav-icon"></i>{" "}
+                Qualification
               </a>
             </li>
             <li className="nav-item">

@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import SectionHeader from "../global/SectionHeader";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
+import MyCV from "../../assets/cv/Kishor_Mahmud_CV.pdf";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +15,12 @@ const About = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      window.location.href = 'https://my-resume-nine-wheat.vercel.app/';
+      const link = document.createElement('a');
+      link.href = MyCV;
+      link.download = 'Kishor_Mahmud_CV.pdf'; 
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link); 
     }, 2000);
   };
   return (
